@@ -8,7 +8,7 @@ const tipsButton = document.getElementById("tips-button");
 const rulesButton = document.getElementById("rules-button");
 const tips = document.getElementById('tips-bar');
 const rules = document.getElementById('rules-bar');
-
+const temaBtn = document.getElementById("tema-button");
 
 let currentPlayer = 'X';
 let gameActive = false;
@@ -25,6 +25,9 @@ const winningCombinations = [
     [2, 4, 6],
 ];
 
+temaBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
 playBtn.addEventListener("click", () => {
     overlay.style.display = "none";
     gameActive = true;

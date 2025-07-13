@@ -1,3 +1,25 @@
+:root{
+    --color-main:antiquewhite;
+    --color-box: rgb(252, 199, 23);
+    --color-box2: rgba(255, 230, 106, 0.5);
+    --color-border-bottom:#ccc;
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
+    --color-text-menu: rgb(90, 54, 0);
+    --color-play-button: rgb(255, 178, 77);
+    --color-cell-box: white;
+    --color-hover:  #eaeaea;
+}
+body.dark {
+  --color-main: #a9a6ab;
+  --color-box: #343641;
+  --color-box2: rgba(51, 29, 87, 0.5);
+  --color-border-bottom: #000000;
+  --color-box-shadow: rgba(255, 255, 255, 0.05);
+  --color-text-menu: #f2c4ec;
+  --color-play-button: #482960;
+  --color-cell-box: #2a2a2a;
+  --color-hover: #828282;
+}
 * {
   box-sizing: border-box;
   font-family: cursive;
@@ -6,7 +28,7 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: var(--color-main);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,13 +39,13 @@ body {
 
 .heading-box,.footer-box {
     width: 100%;
-    background-color: rgb(252, 199, 23);
+    background-color: var(--color-box);
     padding: 1.5rem 2rem;               /* ruang dalam atas-bawah dan kiri-kanan */
     text-align: center;
-    color:antiquewhite;
+    color:var(--color-main);
     border-radius: 8px;
-    border-bottom: 2px solid #ccc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--color-border-bottom); 
+    box-shadow: 0 2px 4px var(--color-box-shadow);
 }
 .heading-box h1 {
     font-size: 3rem;
@@ -31,13 +53,13 @@ body {
 
 .navbar-box{
     width: 100%;
-    background-color:rgb(252, 199, 23);
+    background-color:var(--color-box);
     padding: 0.5rem 2rem;               
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #ccc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--color-border-bottom); 
+    box-shadow: 0 2px 4px var(--color-box-shadow);
 }
 
 .navbar-left{
@@ -51,32 +73,35 @@ aside {
 .menu{
     margin: 0; 
     font-size: 1rem;
-    color:rgb(255, 244, 229);
+    color:var(--color-main);
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
+.menu:hover{
+    color:var(--color-text-menu);
+}
 .menu-bar{
     width: 100%;
-    background-color: rgba(255, 230, 106, 0.5);
+    background-color: var(--color-box2);
     padding: 0.5rem 2rem;   
     border-radius: 8px;             
     text-align: left;
     font-size: small;
-    color: rgb(90, 54, 0);
-    border-bottom: 2px solid #ccc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--color-text-menu);
+    border-bottom: 2px solid var(--color-border-bottom); 
+    box-shadow: 0 2px 4px var(--color-box-shadow);
 }
 .main-box{
     position: relative; 
     width: 100%;
-    background-color: rgba(255, 230, 106, 0.5);
+    background-color: var(--color-box2);
     padding: 0.5rem 2rem;                
     text-align: center;
     border-radius: 8px;
     align-items: center;
-    border-bottom: 2px solid #ccc; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--color-border-bottom); 
+    box-shadow: 0 2px 4px var(--color-box-shadow);
 }
 
 .overlay {
@@ -93,16 +118,19 @@ aside {
     z-index: 2;
 }
 
-#play-button{
+#status{
+    color: var(--color-text-menu);
+}
+#play-button, #restart{
     font-size: 1.5rem;
-    background: rgb(255, 178, 77);
+    background: var(--color-play-button);
     border: none;
     padding: 1rem 2.5rem;
     border-radius: 50px;
-    color: #1a1a1a;
+    color: var(--color-text-menu);
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px var(--color-box-shadow);
     transition: background 0.3s ease;
 }
 
@@ -117,18 +145,19 @@ aside {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: white;
+    background-color: var(--color-cell-box);
     border: 2px solid #b2b2ad;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--color-text-menu);
     font-size: 2.5rem;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.cell:hover {
-  background-color: #eaeaea;
+.cell:hover, #play-button:hover , #restart:hover{
+  background-color: var(--color-hover);
 }
 
 .info {
