@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="heading-box">
+            <h1>Tic Tac Toe</h1>
+        </header>
+        <nav class="navbar-box">
+            <section class="navbar-left">
+                <button class="menu" id="tips-button">Tips</button>
+                <button class="menu" id="rules-button">Rules</button>
+            </section>
+            <section class="navbar-right">
+                <button class="menu" id="tema-button">Tema</button>
+            </section>
+        </nav>
+        <aside >
+            <section class="menu-bar" id="tips-bar" hidden>
+                <h2>Tips Bermain Tic Tac Toe</h2>
+                <ul>
+                    <li>Ambil posisi pojok jika kamu jalan pertama.</li>
+                    <li>Ambil posisi tengah jika lawan memulai dari pojok.</li>
+                    <li>Ambil pojok jika lawan memulai dari tengah.</li>
+                    <li>Buat fork untuk menciptakan dua peluang menang sekaligus.</li>
+                    <li>Blok fork lawan agar tidak bisa menang dari dua arah.</li>
+                    <li>Menangkan permainan segera jika ada kesempatan.</li>
+                    <li>Hindari memilih posisi sisi di awal permainan.</li>
+                    <li>Fokus bertahan saat lawan bermain agresif.</li>
+                    <li>Pelajari pola seri agar tidak kalah dari pemain cerdas.</li>
+                    <li>Evaluasi langkah-langkah setelah permainan selesai.</li>
+                </ul>
+            </section>
+            <section class="menu-bar" id="rules-bar" hidden >
+                <h2>Aturan Bermain Tic Tac Toe</h2>
+                <ol>
+                    <li>Permainan dimainkan oleh dua pemain: X dan O.</li>
+                    <li>Pemain bergantian mengisi satu kotak kosong pada papan 3x3.</li>
+                    <li>Pemain X selalu mulai permainan lebih dulu.</li>
+                    <li>Tujuan permainan adalah membuat tiga simbol yang sama dalam satu garis.</li>
+                    <li>Garis kemenangan bisa horizontal, vertikal, atau diagonal.</li>
+                    <li>Permainan berakhir jika salah satu pemain menang.</li>
+                    <li>Hindari memilih posisi sisi di awal permainan.</li>
+                    <li>Jika semua kotak terisi dan tidak ada pemenang, hasilnya seri.</li>
+                    <li>Permainan bisa diulang kapan saja dengan menekan tombol restart.</li>
+                    <li>Permainan membutuhkan strategi, bukan hanya keberuntungan.</li>
+                </ol>
+            </section>
+        </aside>
+        <main class="main-box">
+            <section class="overlay" id="overlay">
+                <button id="play-button">Play</button>
+            </section>
+            <section class="game" id="game">
+                <div class="board" id="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </section>
+
+            <section class="info">
+                <p id="status">Player X's turn</p>
+                <button id="restart">Restart</button>
+            </section>
+        </main>
+        <footer class="footer-box">
+            <p>Made by: @nabillakha</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
